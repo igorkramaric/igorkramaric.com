@@ -7,3 +7,5 @@
 .DS_Store
 .project
 .pydevproject
+_site/
+.github/
