@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 820" role="img" aria-labelledby="title desc">
+  <title id="title">Architectural section drawing</title>
+  <desc id="desc">A monochrome abstract architectural elevation made from thin structural lines.</desc>
+  <rect width="640" height="820" fill="#f7f6f1"/>
+  <g fill="none" stroke="#171717" stroke-linecap="square" stroke-width="2">
+    <path d="M68 738h504"/>
+    <path d="M88 694h464"/>
+    <path d="M116 650h408"/>
+    <path d="M148 606h344"/>
+    <path d="M180 562h280"/>
+    <path d="M216 518h208"/>
+    <path d="M252 474h136"/>
+    <path d="M320 474v264"/>
+    <path d="M148 606V270"/>
+    <path d="M492 606V270"/>
+    <path d="M148 270h344"/>
+    <path d="M188 270V144"/>
+    <path d="M452 270V144"/>
+    <path d="M188 144h264"/>
+    <path d="M222 144V98"/>
+    <path d="M418 144V98"/>
+    <path d="M222 98h196"/>
+    <path d="M252 270V98"/>
+    <path d="M388 270V98"/>
+    <path d="M252 190h136"/>
+    <path d="M116 650V336"/>
+    <path d="M524 650V336"/>
+    <path d="M116 336h408"/>
+    <path d="M68 738V402"/>
+    <path d="M572 738V402"/>
+    <path d="M68 402h504"/>
+  </g>
+  <g fill="none" stroke="#171717" stroke-opacity=".38" stroke-width="1">
+    <path d="M68 446h504"/>
+    <path d="M68 490h504"/>
+    <path d="M68 534h504"/>
+    <path d="M68 578h504"/>
+    <path d="M68 622h504"/>
+    <path d="M68 666h504"/>
+    <path d="M116 402v336"/>
+    <path d="M164 402v336"/>
+    <path d="M212 402v336"/>
+    <path d="M260 402v336"/>
+    <path d="M308 402v336"/>
+    <path d="M356 402v336"/>
+    <path d="M404 402v336"/>
+    <path d="M452 402v336"/>
+    <path d="M500 402v336"/>
+    <path d="M548 402v336"/>
+  </g>
+  <g fill="#171717">
+    <circle cx="68" cy="738" r="4"/>
+    <circle cx="572" cy="738" r="4"/>
+    <circle cx="320" cy="474" r="4"/>
+    <circle cx="188" cy="144" r="4"/>
+    <circle cx="452" cy="144" r="4"/>
+  </g>
+  <g fill="#171717" font-family="Inter, Arial, sans-serif" font-size="14" letter-spacing="1.5">
+    <text x="68" y="78">SECTION / SYSTEM / RESPONSIBILITY</text>
+    <text x="68" y="790">STRUCTURE BEFORE STYLE</text>
+  </g>
+</svg>

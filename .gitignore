@@ -1,0 +1,9 @@
+.idea
+*.pyc
+*.mo
+*~
+*LICENSE.txt
+*.map
+.DS_Store
+.project
+.pydevproject
