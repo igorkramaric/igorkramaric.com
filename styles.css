@@ -284,6 +284,65 @@ h3 {
   color: #3d3a36;
 }
 
+.earlier-experience {
+  border-top: 1px solid var(--ink);
+}
+
+.earlier-body {
+  display: grid;
+  gap: 34px;
+}
+
+.earlier-copy {
+  display: grid;
+  gap: 18px;
+  max-width: 48rem;
+}
+
+.earlier-copy p {
+  margin: 0;
+  color: #3d3a36;
+  font-size: 1.08rem;
+}
+
+.earlier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.earlier-grid article {
+  min-height: 320px;
+  padding: 22px;
+  background: var(--paper);
+}
+
+.earlier-grid h3 {
+  margin-bottom: 36px;
+}
+
+.earlier-grid ul {
+  columns: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.earlier-grid li {
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  color: #3d3a36;
+}
+
+.historical-note {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .capabilities {
   padding: 90px 0;
   border-top: 1px solid var(--ink);
@@ -494,11 +553,13 @@ h3 {
   }
 
   .capability-grid,
+  .earlier-grid,
   .tech-groups {
     grid-template-columns: 1fr;
   }
 
   .capability-grid article,
+  .earlier-grid article,
   .tech-groups article {
     min-height: 260px;
   }
