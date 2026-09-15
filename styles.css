@@ -338,6 +338,22 @@ h3 {
   font-size: 1.08rem;
 }
 
+.reliability-note {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.reliability-note h3 {
+  color: var(--ink);
+  font-size: inherit;
+}
+
+.reliability-note p {
+  margin: 0;
+}
+
 .capabilities {
   padding: 90px 0;
   border-top: 1px solid var(--ink);
