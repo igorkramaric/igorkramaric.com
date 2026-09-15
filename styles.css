@@ -40,6 +40,15 @@ a:hover {
   text-decoration-color: currentColor;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 5px;
+}
+
+section[id] {
+  scroll-margin-top: 28px;
+}
+
 .site-header,
 .site-footer,
 main {
@@ -65,6 +74,7 @@ main {
 }
 
 .brand {
+  flex-shrink: 0;
   gap: 12px;
   font-size: 0.82rem;
   font-weight: 700;
@@ -85,6 +95,7 @@ main {
 }
 
 .nav {
+  flex-wrap: wrap;
   gap: 20px;
   font-size: 0.82rem;
   font-weight: 650;
@@ -136,7 +147,7 @@ h2 {
 
 h1 {
   margin-bottom: 28px;
-  font-size: 8.2rem;
+  font-size: clamp(4rem, 7.4vw, 6.6rem);
 }
 
 h2 {
@@ -152,10 +163,17 @@ h3 {
 
 .lead {
   max-width: 43rem;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
   color: #34322f;
   font-size: 1.35rem;
   line-height: 1.5;
+}
+
+.hero-context {
+  max-width: 40rem;
+  margin-bottom: 32px;
+  color: #3d3a36;
+  font-size: 1.08rem;
 }
 
 .hero-actions {
@@ -198,6 +216,8 @@ h3 {
 .section-drawing {
   width: 100%;
   height: auto;
+  max-height: 420px;
+  object-fit: contain;
   border-bottom: 1px solid var(--line);
   padding-bottom: 22px;
 }
@@ -256,32 +276,45 @@ h3 {
 .section-heading h2,
 .fit h2 {
   max-width: 14ch;
-  font-size: 4.35rem;
+  font-size: 3.8rem;
 }
 
-.timeline {
+.section-intro {
+  margin-bottom: 30px;
+  font-size: 1.18rem;
+}
+
+.work-examples {
   border-top: 1px solid var(--ink);
 }
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr);
-  gap: 28px;
+.work-example {
   padding: 30px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.timeline-item time,
+.work-result {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 .number {
   color: var(--muted);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
 }
 
-.timeline-item p,
+.work-example p:last-child,
 .capability-grid p {
   margin-bottom: 0;
   color: #3d3a36;
+}
+
+.role-note {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .earlier-experience {
@@ -305,47 +338,20 @@ h3 {
   font-size: 1.08rem;
 }
 
-.earlier-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--ink);
-  border: 1px solid var(--ink);
-}
-
-.earlier-grid article {
-  min-height: 320px;
-  padding: 22px;
-  background: var(--paper);
-}
-
-.earlier-grid h3 {
-  margin-bottom: 36px;
-}
-
-.earlier-grid ul {
-  columns: 1;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.earlier-grid li {
-  padding: 9px 0;
-  border-top: 1px solid var(--line);
-  color: #3d3a36;
-}
-
-.historical-note {
-  margin-bottom: 18px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-
 .capabilities {
   padding: 90px 0;
   border-top: 1px solid var(--ink);
+}
+
+.capabilities .section-heading h2 {
+  max-width: 20ch;
+}
+
+.approach-intro {
+  max-width: 48rem;
+  margin: 28px 0 0;
+  font-size: 1.18rem;
+  color: #3d3a36;
 }
 
 .capability-grid {
@@ -411,6 +417,24 @@ h3 {
   color: #3d3a36;
 }
 
+.recent-tech {
+  padding: 24px;
+  border-left: 2px solid var(--ink);
+  background: var(--soft);
+}
+
+.recent-tech h3 {
+  margin-bottom: 20px;
+}
+
+.recent-tech p {
+  color: #3d3a36;
+}
+
+.recent-tech p:last-child {
+  margin-bottom: 0;
+}
+
 .fit {
   display: grid;
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
@@ -426,6 +450,11 @@ h3 {
   padding: 0;
   list-style: none;
   counter-reset: fit;
+}
+
+.fit-intro {
+  margin: 28px 0 0;
+  color: #3d3a36;
 }
 
 .fit-list li {
@@ -461,6 +490,14 @@ h3 {
 
 .site-footer a {
   font-weight: 760;
+}
+
+.site-footer {
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 980px) {
@@ -539,8 +576,7 @@ h3 {
     padding: 46px 0 42px;
   }
 
-  .summary-list div,
-  .timeline-item {
+  .summary-list div {
     grid-template-columns: 1fr;
     gap: 8px;
   }
@@ -553,29 +589,33 @@ h3 {
   }
 
   .capability-grid,
-  .earlier-grid,
   .tech-groups {
     grid-template-columns: 1fr;
   }
 
   .capability-grid article,
-  .earlier-grid article,
   .tech-groups article {
-    min-height: 260px;
+    min-height: 0;
   }
 
   .number {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+  }
+
+  .tech-groups h3 {
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 520px) {
   h1 {
-    font-size: 4.2rem;
+    font-size: clamp(3.5rem, 12.9vw, 4.2rem);
   }
 
-  h2 {
-    font-size: 2.7rem;
+  h2,
+  .section-heading h2,
+  .fit h2 {
+    font-size: clamp(2.3rem, 8.3vw, 2.7rem);
   }
 
   .lead,
@@ -586,5 +626,11 @@ h3 {
 
   .statement p {
     font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

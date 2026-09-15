@@ -11,21 +11,26 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Igor Kramaric is a senior software engineer and hands-on technology leader working with Python, Django, PostgreSQL, Oracle, React, Redis, ClickHouse, JavaScript, SQL, AWS, Render, Heroku, automated testing, and CI.">
-    <title>Igor Kramaric | Software Engineering Leadership</title>
+    <meta name="description" content="Igor Kramarić is a hands-on senior software engineer building resilient Python and data systems, with a growing focus on AI-assisted and agentic software development.">
+    <meta property="og:title" content="Igor Kramarić | Hands-On Senior Software Engineer">
+    <meta property="og:description" content="Production Python, thoughtful architecture, and a growing focus on AI-assisted and agentic software development. Based in Zagreb, working remotely.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://igorkramaric.com/">
+    <link rel="canonical" href="https://igorkramaric.com/">
+    <title>Igor Kramarić | Hands-On Senior Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Igor Kramaric home">
+      <a class="brand" href="./" aria-label="Igor Kramarić home">
         <span class="brand-mark">IK</span>
-        <span>Igor Kramaric</span>
+        <span>Igor Kramarić</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#work">Work</a>
+        <a href="#approach">AI &amp; Approach</a>
         <a href="#technology">Technology</a>
-        <a href="#earlier-work">Earlier Work</a>
-        <a href="#fit">Fit</a>
+        <a href="#fit">Let’s talk</a>
         <a href="https://github.com/igorkramaric">GitHub</a>
         <a href="https://www.linkedin.com/in/igor-kramari%C4%87-b7139b4/">LinkedIn</a>
       </nav>
@@ -34,16 +39,19 @@
     <main>
       <section class="hero" aria-labelledby="intro-title">
         <div class="hero-copy">
-          <p class="eyebrow">SOFTWARE ENGINEER. TECHNICAL LEADER. SYSTEMS BUILDER.</p>
-          <h1 id="intro-title">I build and sustain business-critical software.</h1>
+          <p class="eyebrow">Hands-on senior software engineer</p>
+          <h1 id="intro-title">I build systems that hold up.</h1>
           <p class="lead">
-            I help companies build, stabilize, and evolve complex software, including AI-enabled research platforms and
-            data-intensive systems. I combine sound architecture, practical technical leadership, direct communication with
-            users and management, and hands-on engineering.
+            I work in Python, data, and the details that make software dependable. For 12 years at MediaPredict,
+            I helped lay the technical foundation and stayed hands-on as the platform grew.
+          </p>
+          <p class="hero-context">
+            Now I’m applying that production experience to AI-assisted systems and agentic software development,
+            with the same care for architecture, debugging, and correctness.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="https://www.linkedin.com/in/igor-kramari%C4%87-b7139b4/">Start a conversation</a>
-            <a class="button secondary" href="#work">View experience</a>
+            <a class="button primary" href="mailto:igor.kramaric@gmail.com">Start a conversation</a>
+            <a class="button secondary" href="#work">Explore the work</a>
           </div>
         </div>
 
@@ -51,20 +59,20 @@
           <img src="assets/architectural-section.svg" alt="" class="section-drawing">
           <dl class="summary-list">
             <div>
-              <dt>Most recent experience</dt>
-              <dd>MediaPredict, 2014-2026<br>Remote / New York</dd>
-            </div>
-            <div>
-              <dt>Role progression</dt>
-              <dd>Senior Software Engineer<br>Engineering Team Lead<br>Chief Technology Officer</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Architecture, AI-enabled research, prediction markets, product delivery</dd>
+              <dt>Foundation</dt>
+              <dd>12 years building distributed Python systems at MediaPredict</dd>
             </div>
             <div>
               <dt>Core stack</dt>
-              <dd>Python, Django, PostgreSQL, Redis, React, Oracle</dd>
+              <dd>Python, Django, PostgreSQL, Celery, ClickHouse, Redis</dd>
+            </div>
+            <div>
+              <dt>Growing focus</dt>
+              <dd>AI-assisted workflows, agentic development, semantic search</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Zagreb, Croatia, EU<br>Working remotely with US, UK &amp; Canadian teams</dd>
             </div>
           </dl>
         </aside>
@@ -72,86 +80,98 @@
 
       <section class="statement">
         <p>
-          Good software work is architectural work. It needs structure, proportion, context, constraints, and a clear
-          understanding of who will live with the system after it ships.
+          In the AI era, implementation is getting cheaper; architecture is not.
         </p>
       </section>
 
       <section class="section-grid" id="work" aria-labelledby="work-title">
         <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2 id="work-title">A long arc of technical responsibility at MediaPredict.</h2>
+          <p class="eyebrow">Selected work / MediaPredict / 2014–2026</p>
+          <h2 id="work-title">Built early. Evolved in production.</h2>
         </div>
-        <div class="timeline" aria-label="MediaPredict role timeline">
-          <article class="timeline-item">
-            <time>2021-2026</time>
-            <div>
-              <h3>Chief Technology Officer</h3>
+        <div class="work-body">
+          <p class="section-intro">
+            I joined MediaPredict early, working alongside the founders on major architectural decisions for a distributed
+            market-research platform. I built its foundation and stayed involved in the code, data, releases, and production
+            operations for the next 12 years.
+          </p>
+          <div class="work-examples">
+            <article class="work-example">
+              <p class="work-result">7M+ respondent rows · 300K+ unique attributes</p>
+              <h3>A data engine with operational guardrails</h3>
               <p>
-                Over 12 years at MediaPredict, I helped build and lead a proprietary market-research platform covering
-                prediction markets, survey workflows, analytics, AI-assisted research automation, reporting, and production
-                infrastructure.
+                Built a soft-real-time ETL engine with dedicated workers, validation, monitoring, operational controls,
+                and circular-reference detection. Distributed Celery processing also eliminated up to 100 queries from
+                large demographic reports and cut dashboard task fan-out threefold.
               </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <time>2018-2021</time>
-            <div>
-              <h3>Engineering Team Lead</h3>
+            </article>
+            <article class="work-example">
+              <p class="work-result">Hundreds of research hours saved</p>
+              <h3>From fragmented research data to reusable analysis</h3>
               <p>
-                Led engineers while staying close to the codebase, turning research and product needs into technical plans
-                for analytics, data systems, reporting workflows, and production delivery.
+                Unified survey, pair-off, open-ended, and prediction-market data in one analytics extension that automated
+                analysis and reporting. Reusable study templates reduced market creation time to 20% of its original duration.
               </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <time>2014-2018</time>
-            <div>
-              <h3>Senior Software Engineer</h3>
+            </article>
+            <article class="work-example">
+              <p class="work-result">Data evolution &amp; production reliability</p>
+              <h3>Changing the system while keeping it dependable</h3>
               <p>
-                Solved difficult product, data, and infrastructure problems directly, building the hands-on engineering
-                judgment that later became technical leadership responsibility.
+                Led the migration from PostgreSQL hstore data to standard BI columns, with background orchestration,
+                operational controls, and extensive automated tests. Hardened Celery workers and event-driven pipelines
+                with batching, secure delivery, and failure handling; used targeted tracing to investigate production behavior.
               </p>
-            </div>
-          </article>
+            </article>
+          </div>
+          <p class="role-note">
+            The work grew from senior to staff to principal engineering scope (official title: CTO, 2021–2026).
+            Alongside implementation, I set technical direction, mentored and hired engineers, reviewed code and designs,
+            and worked directly with researchers and business stakeholders.
+          </p>
         </div>
       </section>
 
-      <section class="capabilities" aria-labelledby="capabilities-title">
+      <section class="capabilities" id="approach" aria-labelledby="capabilities-title">
         <div class="section-heading">
-          <p class="eyebrow">How I Help</p>
-          <h2 id="capabilities-title">Useful where business context and engineering depth have to meet.</h2>
+          <p class="eyebrow">AI &amp; engineering approach</p>
+          <h2 id="capabilities-title">Faster implementation. Deliberate design.</h2>
         </div>
+        <p class="approach-intro">
+          Good software needs structure, context, and a clear understanding of who will live with it after it ships.
+          Clear boundaries and well-defined contracts let components evolve or be replaced without destabilizing the system.
+          They also make AI more effective.
+        </p>
         <div class="capability-grid">
           <article>
             <span class="number">01</span>
-            <h3>Own critical systems</h3>
+            <h3>AI in product workflows</h3>
             <p>
-              Step into complex software, understand why it matters, reduce uncertainty, and make decisions that hold up
-              operationally.
+              At MediaPredict, I expanded LLM-assisted research automation: API integration, prompt design,
+              classification, validation, and human review. Data-quality controls were part of the work.
             </p>
           </article>
           <article>
             <span class="number">02</span>
-            <h3>Lead technical teams</h3>
+            <h3>Agents in development</h3>
             <p>
-              Give engineers context, direction, and clear standards while keeping delivery connected to business reality.
+              I introduced agentic development workflows and use AI agents for codebase investigation, implementation,
+              and test/debug cycles, with iterative validation throughout.
             </p>
           </article>
           <article>
             <span class="number">03</span>
-            <h3>Bridge users and management</h3>
+            <h3>Architecture for change</h3>
             <p>
-              Translate between product goals, user pain, technical risk, and executive priorities without losing the
-              important details.
+              I design for extensibility: clear responsibilities, strong abstractions, and explicit contracts.
+              A component should be replaceable without forcing a redesign of everything around it.
             </p>
           </article>
           <article>
             <span class="number">04</span>
-            <h3>Solve hard technical problems</h3>
+            <h3>Responsibility stays with me</h3>
             <p>
-              Stay hands-on when the work needs senior judgment, debugging depth, architecture changes, or careful
-              implementation.
+              I retain responsibility for system design, assumptions, edge cases, security, and production correctness.
+              Reviewing the implementation and testing its behavior remain engineering work.
             </p>
           </article>
         </div>
@@ -159,115 +179,88 @@
 
       <section class="technology" id="technology" aria-labelledby="technology-title">
         <div class="section-heading">
-          <p class="eyebrow">Current Technology</p>
-          <h2 id="technology-title">Comfortable starting with the code.</h2>
+          <p class="eyebrow">Technology</p>
+          <h2 id="technology-title">Deep foundations. New tools.</h2>
         </div>
         <div class="technology-body">
           <p class="technology-intro">
-            I’m comfortable joining as a senior individual contributor: learning the existing system, shipping product work,
-            resolving difficult problems, and earning broader responsibility through results.
+            My strongest production experience is in Python and distributed data systems.
+            Recent backend and AI work extends that foundation into asynchronous services, embeddings, and semantic search.
           </p>
 
           <div class="tech-groups" aria-label="Technology experience">
             <article>
-              <h3>Backend</h3>
-              <p>Python, Django, Django applications, APIs, server-side architecture, asynchronous jobs, integration work.</p>
+              <h3>Backend &amp; product</h3>
+              <p>Python, Django, Celery, APIs, background jobs, and system integration. React for product interfaces.</p>
             </article>
             <article>
               <h3>Data</h3>
-              <p>PostgreSQL, Oracle, SQL, Redis, ClickHouse, data modeling, reporting, query performance, operational data flows.</p>
+              <p>PostgreSQL, ClickHouse, Redis, SQL, and analytics pipelines. PostgreSQL trigrams and RapidFuzz for fuzzy and similarity matching.</p>
             </article>
             <article>
-              <h3>AI and Automation</h3>
-              <p>LLM-assisted research workflows, open-ended response processing, validation, classification, prompt design, API integration, and human-in-the-loop automation.</p>
+              <h3>Production &amp; quality</h3>
+              <p>Cloud platforms, CI/CD, automated tests, refactoring, incident resolution, and release discipline.</p>
             </article>
             <article>
-              <h3>Research Systems</h3>
-              <p>Prediction markets, survey workflows, participant data, analytics, reporting, and tools for understanding sentiment and conviction.</p>
+              <h3>Observability</h3>
+              <p>Coralogix, Sentry, and New Relic, including custom spans for targeted tracing, debugging, and performance investigation.</p>
             </article>
-            <article>
-              <h3>Frontend</h3>
-              <p>React, JavaScript, HTML, CSS, user-facing product interfaces, internal tools, pragmatic UI implementation.</p>
-            </article>
-            <article>
-              <h3>Production</h3>
-              <p>AWS, Render, Heroku, Git, deployment workflows, maintenance, reliability work, automated tests, CI, reviews, and release discipline.</p>
-            </article>
+          </div>
+          <div class="recent-tech">
+            <h3>Recent backend &amp; AI work</h3>
+            <p><strong>FastAPI &amp; Pydantic</strong> — extending deep backend experience to asynchronous Python services.</p>
+            <p><strong>pgvector &amp; Sentence Transformers</strong> — applied to embeddings and semantic search.</p>
           </div>
         </div>
       </section>
 
       <section class="section-grid earlier-experience" id="earlier-work" aria-labelledby="earlier-title">
         <div class="section-heading">
-          <p class="eyebrow">Earlier Experience</p>
-          <h2 id="earlier-title">Before market research, software for industry and infrastructure.</h2>
+          <p class="eyebrow">Earlier foundations</p>
+          <h2 id="earlier-title">Software with a physical world attached.</h2>
         </div>
         <div class="earlier-body">
           <div class="earlier-copy">
             <p>
-              Before joining MediaPredict in 2014, I developed software for industrial, operational, and infrastructure-related
-              environments. The work included web applications for energy automation, building automation, and traffic control,
-              as well as desktop and operational systems used in steel production, food-processing plants, paper production,
-              and traffic infrastructure.
+              At Inwindow and UrbanDigitalMedia, I built remote monitoring and control software for distributed digital-signage
+              installations. Python, Django, PostgreSQL, device drivers, and automated alerts gave operators visibility into
+              equipment health and reduced site visits.
             </p>
             <p>
-              These projects required understanding real operating processes, integrating with existing equipment and systems,
-              presenting operational data clearly, and building dependable software for production environments.
+              At Dr. Oetker, I designed a manufacturing execution system from scratch. At ABB, I developed distributed services
+              and SCADA systems for traffic, energy, and building automation, where downtime had immediate operational consequences.
             </p>
-          </div>
-
-          <div class="earlier-grid" aria-label="Earlier professional breadth">
-            <article>
-              <h3>Industries</h3>
-              <ul>
-                <li>Digital signage</li>
-                <li>Steel production</li>
-                <li>Food processing</li>
-                <li>Paper production</li>
-                <li>Traffic control</li>
-                <li>Building automation</li>
-                <li>Energy automation</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Earlier technology</h3>
-              <p class="historical-note">Historical breadth from pre-2014 projects, separate from my current primary stack.</p>
-              <ul>
-                <li>Python</li>
-                <li>C++</li>
-                <li>C#</li>
-                <li>Perl</li>
-                <li>Oracle</li>
-                <li>SQL Server</li>
-                <li>MySQL</li>
-                <li>JavaScript</li>
-                <li>Ajax</li>
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-            </article>
+            <p>
+              That earlier depth in C++, device protocols, and system integration still informs how I think about reliability:
+              understand the operating environment, make failures visible, and build for the people who depend on the system.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="fit" id="fit" aria-labelledby="fit-title">
         <div>
-          <p class="eyebrow">Best Fit</p>
-          <h2 id="fit-title">For teams that need senior ownership, even when it starts hands-on.</h2>
+          <p class="eyebrow">Let’s talk</p>
+          <h2 id="fit-title">Hard problems. Hands-on work.</h2>
+          <p class="fit-intro">
+            I’m looking for senior, staff, or principal engineering work where architecture and implementation belong together,
+            with a growing focus on AI-assisted systems.
+          </p>
         </div>
         <ul class="fit-list">
-          <li>Joining first as a senior individual contributor and proving value in the codebase.</li>
-          <li>Modernizing or stabilizing an important existing system.</li>
-          <li>Turning unclear business goals into a realistic technical path.</li>
-          <li>Supporting a team that needs stronger technical direction.</li>
-          <li>Debugging, redesigning, or unblocking difficult engineering work.</li>
+          <li>Building and evolving Python services and data-intensive products.</li>
+          <li>Bringing production discipline to AI workflows and agent-assisted development.</li>
+          <li>Working through difficult migrations, reliability problems, and architectural decisions with the team.</li>
         </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Available for selected consulting and engineering leadership work.</p>
-      <a href="https://www.linkedin.com/in/igor-kramari%C4%87-b7139b4/">Contact via LinkedIn</a>
+      <div>
+        <p>Based in Zagreb, Croatia · Remote with US, UK &amp; Canadian teams.</p>
+        <p>Available for travel to the US, UK &amp; Canada.</p>
+      </div>
+      <a href="mailto:igor.kramaric@gmail.com">igor.kramaric@gmail.com</a>
     </footer>
   </body>
 </html>
